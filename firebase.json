@@ -1,20 +1,17 @@
 {
   "functions": {
-    "source": "functions",
     "predeploy": [
-      "npm --prefix nuxtapp run build && rm -rf functions/nuxt && cp -r nuxtapp/.nuxt/ functions/nuxt/ && cp nuxtapp/nuxt.config.ts functions/"
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
     ]
   },
   "hosting": {
-    "predeploy": [
-      "rm -rf public/* && mkdir -p public/_nuxt && cp -r nuxtapp/.nuxt/dist/client/ public/_nuxt && cp -a nuxtapp/static/. public/"
-    ],
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
-        "function": "ssr"
+        "functions": "ssr"
       }
     ]
   }
