@@ -1,4 +1,4 @@
-# nuxtapp
+# nuxt-app
 
 ## Build Setup
 
