@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt-ts build",
-    "build-nuxt": "nuxt-ts build && cp -R .nuxt/ ../functions/.nuxt && rm -rf ../public/* && cp -R .nuxt/dist/client/ ../public/assets",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "lint": "npm run lint:ts"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.1.0",

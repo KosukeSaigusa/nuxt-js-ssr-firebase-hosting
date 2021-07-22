@@ -1,5 +1,7 @@
 .DS_Store
+firebase-debug.log
 
 public/
 .firebase/**.cache
-functions/.nuxt/
+functions/nuxt/
+functions/ui-debug.log
